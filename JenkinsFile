@@ -1,7 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage ('Run Load Test using Taurus') {
         stage ('Run Load Test') {
 			input {
                 message "please enter values"
@@ -25,5 +24,4 @@ pipeline {
             }
         }
     }
-}
 }
