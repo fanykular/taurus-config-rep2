@@ -6,9 +6,9 @@ pipeline {
                 echo 'Starting test with Taurus'
                 echo "duration, ${duration}, users, ${users}, rampUp, ${rampUp}."
                 sh 'bzt stuff.yml         \
-                      -o execution.2.ramp-up=%rampUp%      \
-                      -o execution.10.concurrency=%users%   \
-                      -o execution.100.hold-for=%duration%   \
+                      -o execution.0.ramp-up=%2%      \
+                      -o execution.0.concurrency=%10%   \
+                      -o execution.0.hold-for=%100%   \
                       -report'
                 echo 'Testddsada completed'
             }
