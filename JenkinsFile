@@ -1,6 +1,17 @@
 pipeline {
     agent any
     stages {
+    stage ('Run Load Test') {
+			input {
+                message "please enter values"
+                ok "Ok"
+                submitter "no matter"
+                parameters {
+                    string(name: 'duration', defaultValue: '100')
+                    string(name: 'users', defaultValue: '10')
+                    string(name: 'rampUp', defaultValue: '2')
+                }
+            }
         stage ('Run Load Test using Taurus') {
             steps {
                 echo 'Starting test with Taurus'
