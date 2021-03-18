@@ -11,10 +11,6 @@ pipeline {
                     string(name: 'users', defaultValue: '10')
                     string(name: 'rampUp', defaultValue: '2')
                 }
-		
-    stage("test"){
-        sh "ipconfig"
-    }
             }
             steps {
                 echo 'Starting test with Taurus'
