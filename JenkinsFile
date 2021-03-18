@@ -22,6 +22,12 @@ pipeline {
                       -report'
                 echo 'Test completed'
             }
+	    
+node{
+    stage("test"){
+        sh "ipconfig"
+    }
+
         }
     }
 }
