@@ -1,2 +1,2 @@
-cd C:\NewPerformanceTask 
+cd C:\\NewPerformanceTask 
 bzt staff.yml -report
