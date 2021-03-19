@@ -5,11 +5,10 @@ pipeline {
         stage ('1. Run Load Test using Taurus') {
             steps {
                 echo 'Starting test with Taurus'
-                echo "duration, ${duration}, users, ${users}, rampUp, ${rampUp}."
+                echo "duration, ${duration}, users, ${users}."
                 sh 'bzt stuff.yml         \
-                    -o execution.0.ramp-up=%2%      \
-                      -o execution.0.concurrency=%6%   \
-                      -o execution.0.hold-for=%100%   \
+                      -o execution.0.concurrency=%users%   \
+                      -o execution.0.hold-for=%duration%   \
                       -report'
                 echo 'Test completed'
             }
