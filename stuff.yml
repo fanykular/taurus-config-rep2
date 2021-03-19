@@ -1,6 +1,8 @@
 execution:
-- executor: jmeter
-  scenario:
-    script: EdidtedNewJmeterscript.jmx
-    locations:
-      us-east-1: 1
+- scenario: simple
+
+ 
+
+scenarios:
+  simple:
+    script: C:\NewPerformanceTask\EdidtedNewJmeterscript.jmx
