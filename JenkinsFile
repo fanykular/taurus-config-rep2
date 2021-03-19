@@ -9,16 +9,15 @@ pipeline {
                 parameters {
                     string(name: 'duration', defaultValue: '100')
                     string(name: 'users', defaultValue: '10')
-                    string(name: 'rampUp', defaultValue: '2')
+             
                 }
             }
             steps {
                 echo 'Starting test with Taurus'
-                echo "duration, ${duration}, users, ${users}, rampUp, ${rampUp}."
-                sh 'stuff.yml         \
-                      -o execution.0.ramp-up=%rampUp%      \
+                echo "duration, ${duration}, users, ${users}."
+                       sh 'stuff.yml         \
+		      -o execution.0.hold-for=%duration%   \
                       -o execution.0.concurrency=%users%   \
-                      -o execution.0.hold-for=%duration%   \
                       -report'
                 echo 'Test completed'
             }
