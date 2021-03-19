@@ -1,6 +1,7 @@
 pipeline {
     agent any
     stages {
+    
         stage ('Run Load Test using Taurus') {
             steps {
                 echo 'Starting test with Taurus'
