@@ -1,7 +1,10 @@
----
 execution:
+concurrency:10
+hold-for: 2m30s
 - executor: jmeter
+
+
   scenario:
+  lable: BlazeDemo
     script: TestPlanBureacovaUpdate.jmx
-    locations:
       us-east-1: 1
