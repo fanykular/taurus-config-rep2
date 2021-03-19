@@ -5,4 +5,4 @@ execution:
 
 scenarios:
   simple:
-    script: C:\NewPerformanceTask\EdidtedNewJmeterscript.jmx
+    script: EdidtedNewJmeterscript.jmx
