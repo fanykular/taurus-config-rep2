@@ -1,8 +1,7 @@
+---
 execution:
-- scenario: simple
-
- 
-
-scenarios:
-  simple:
-    script: EdidtedNewJmeterscript.jmx
+- executor: jmeter
+  scenario:
+    script: TestPlanBureacovaUpdate.jmx
+    locations:
+      us-east-1: 1
