@@ -19,7 +19,7 @@ pipeline {
 		      -o execution.0.hold-for=%duration%   \
                       -o execution.0.concurrency=%users%   \
                       -report'
-                echo 'Test completed'
+                echo 'Testddsadacompleted'
             }
         }
     }
