@@ -1,26 +1,2 @@
-pipeline {
-    agent any
-    stages {
-        stage ('Run Load Test') {
-			input {
-                message "please enter values"
-                ok "Ok"
-                submitter "no matter"
-                parameters {
-                    string(name: 'duration', defaultValue: '100')
-                    string(name: 'users', defaultValue: '10')
-             
-                }
-            }
-            steps {
-                echo 'Starting test with Taurus'
-                echo "duration, ${duration}, users, ${users}."
-                       sh 'stuff.yml   \
-		      -o execution.0.hold-for=%duration%   \
-                      -o execution.0.concurrency=%users%   \
-                      -report'
-                echo 'Testddsadacompleted'
-            }
-        }
-    }
-}
+cd C:\NewPerformanceTask 
+bzt staff.yml -report
