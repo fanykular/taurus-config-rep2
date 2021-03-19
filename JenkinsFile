@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo 'Starting test with Taurus'
                 echo "duration, ${duration}, users, ${users}."
-                       sh 'stuff.yml         \
+                       sh 'https://github.com/VadimPasat/taurus-config-rep2/blob/main/stuff.yml         \
 		      -o execution.0.hold-for=%duration%   \
                       -o execution.0.concurrency=%users%   \
                       -report'
