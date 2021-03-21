@@ -1,1 +1,3 @@
-node { stage 'Run JMeter Test' bzt 'stuff.yml' }
+node {
+stage 'Run JMeter Test' bzt 'stuff.yml'
+}
