@@ -2,4 +2,4 @@ execution:
 hold-for: 5m
 - executor: jmeter
   scenario:
-    script: recording.jmx
+    script: EdidtedNewJmeterscript.jmx
