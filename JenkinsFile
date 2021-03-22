@@ -1,16 +1,14 @@
 pipeline {
-    agent any
-    stages {
-        stage ('Run Load Test using Taurus') {
-            steps {
-                echo 'Starting test with Taurus'
-                echo "duration, ${duration}, users, ${users}, rampUp, ${rampUp}."
-                sh 'bzt stuff.yml         \
-                      -o execution.0.hold-for=%duration%   \
-                      -o execution.0.concurrency=%users%   \
-                      -report'
-                echo 'Test completed'
-            }
-        }
-    }
+   agent any
+   stages {
+       stage('read') {
+           steps {
+               script {
+				echo 'Starting test with Taurus'
+				bzt "EdidtedNewJmeterscript.jmx -report -o settings.artifacts-dir=artifacts"
+				echo 'Test completed'
+               }
+           }
+       }
+   }
 }
