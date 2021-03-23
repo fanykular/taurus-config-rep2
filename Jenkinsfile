@@ -17,7 +17,7 @@ pipeline {
             steps {
                  echo 'Starting test with Taurus'
                 echo "duration, ${duration}, users, ${users}, rampUp, ${rampUp}."
-                sh 'bzt stuff.yml         \
+                bat 'bzt stuff.yml         \
                       -report'
                 echo 'Test completed'
             }
