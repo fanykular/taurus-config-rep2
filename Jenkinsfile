@@ -16,7 +16,7 @@ pipeline {
             }
             steps {
                  echo 'Starting test with Taurus'
-                         sh 'bzt stuff.yml -report'
+                         bzt stuff.yml -report
                 echo 'Test completed'
             }
         }
