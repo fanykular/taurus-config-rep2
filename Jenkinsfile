@@ -9,9 +9,9 @@ pipeline {
                 ok "Ok"
                 submitter "no matter"
                 parameters {
-                    string(name: 'duration', defaultValue: '60')
+                    string(name: 'duration', defaultValue: '20')
                     string(name: 'users', defaultValue: '5')
-                    string(name: 'rampUp', defaultValue: '10')
+                    string(name: 'rampUp', defaultValue: '2')
                 }
             }
             steps {
