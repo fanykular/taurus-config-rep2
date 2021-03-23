@@ -2,6 +2,7 @@
 execution:
 - executor: jmeter
   scenario:
+  hold-for: 'duration'
     script: EdidtedNewJmeterscript.jmx
     locations:
       us-east-1: 1
