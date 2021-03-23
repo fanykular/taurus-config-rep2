@@ -4,11 +4,10 @@ pipeline {
         stage ('Run Load Test using Taurus') {
             steps {
                 echo 'Starting test with Taurus'
-                echo "duration, ${duration}, users, ${users}, rampUp, ${rampUp}."
+                echo "duration, ${duration}, users, ${users}."
                 sh 'bzt EdidtedNewJmeterscript.jmx         \
                       -o execution.0.hold-for=%duration%   \
                       -o execution.0.concurrency=%users%   \
-                      -o execution.0.ramp-up=%rampUp%      \
                       -report'
                 echo 'Testdsa completed'
             }
