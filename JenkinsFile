@@ -6,6 +6,7 @@ pipeline {
                script {
 				echo 'Starting test with Taurus'
 				bzt "EdidtedNewJmeterscript.jmx -report -o settings.artifacts-dir=artifacts"
+				publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
 				echo 'Test completed'
                }
            }
