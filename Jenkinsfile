@@ -15,8 +15,13 @@ pipeline {
                 }
             }
             steps {
-                 echo 'Starting test with Taurus'
-                        sh bzt stuff.yml -report'
+                echo 'Starting test with Taurus'
+                echo "duration, ${duration}, users, ${users}, rampUp, ${rampUp}."
+                sh bzt stuff.yml         \
+                      -o execution.0.ramp-up=%rampUp%      \
+                      -o execution.0.concurrency=%users%   \
+                      -o execution.0.hold-for=%duration%   \
+                      -report'
                 echo 'Test completed'
             }
         }
