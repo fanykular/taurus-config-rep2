@@ -1,19 +1,7 @@
-
-
 pipeline {
     agent any
     stages {
-        stage ('Run Load Test') {
-			input {
-                message "please enter values"
-                ok "Ok"
-                submitter "no matter"
-                parameters {
-                    string(name: 'duration', defaultValue: '20')
-                    string(name: 'users', defaultValue: '5')
-                    string(name: 'rampUp', defaultValue: '2')
-                }
-            }
+        stage ('Run Load Test using Taurus') {
             steps {
                 echo 'Starting test with Taurus'
                 echo "duration, ${duration}, users, ${users}, rampUp, ${rampUp}."
@@ -22,7 +10,7 @@ pipeline {
                       -o execution.0.concurrency=%users%   \
                       -o execution.0.hold-for=%duration%   \
                       -report'
-                echo 'Test dsadacompleted'
+                echo 'Test completed'
             }
         }
     }
