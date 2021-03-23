@@ -7,9 +7,9 @@ pipeline {
                 ok "Ok"
                 submitter "no matter"
                 parameters {
-                    string(name: 'duration', defaultValue: '20')
-                    string(name: 'users', defaultValue: '5')
-                    string(name: 'rampUp', defaultValue: '2')
+                    float(name: 'duration', defaultValue: '20')
+                    float(name: 'users', defaultValue: '5')
+                    float(name: 'rampUp', defaultValue: '2')
                 }
             }
             steps {
