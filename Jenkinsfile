@@ -14,7 +14,7 @@ pipeline {
            steps {
                script {
 				echo 'Starting test with Taurus'
-				bzt "C:\\NewPerformanceTask\\EdidtedNewJmeterscript.jmx -report -o settings.artifacts-dir=artifacts"
+				bzt "C:\Users\Vpasat\OneDrive - ENDAVA\Desktop\MyDesktop\Jenkins CI&CD Task\EdidtedNewJmeterscript.jmx -report -o settings.artifacts-dir=artifacts"
 				echo 'Test completed'
                }
            }
